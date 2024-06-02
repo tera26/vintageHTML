@@ -185,7 +185,6 @@
     <script>
   document.addEventListener("DOMContentLoaded", function() {
     var image = document.getElementById("refreshImage");
-    var interval = 5000; // Intervalo em milissegundos (5000ms = 5 segundos)
   
     // Função para atualizar a página
     function refreshPage() {
@@ -195,11 +194,6 @@
     // Adiciona o evento de clique na imagem para atualizar a página
     image.addEventListener('click', refreshPage);
 
-    // Função para atualizar a imagem em intervalos regulares
-    setInterval(function() {
-        var timestamp = new Date().getTime();
-        image.src = "images/refresca.png" + "?t=" + timestamp; // Substitua "refresh.png" pelo caminho correto para a sua imagem de refresh
-    }, interval);
 });
 
     </script>
