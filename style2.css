@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    pointer-events: auto; /* Permitir interações */
+    text-align: justify;
+}
+
+.link {
+    font-weight: bold; /* Define o texto em negrito */
+    text-decoration: none; /* Remove a decoração padrão do link */
+    color: inherit; /* Usa a cor do texto padrão */
+}
+
+.overlay-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Coloca o contêiner e os quadrados em uma camada superior */
+    pointer-events: none; /* Permite que cliques passem pelo contêiner */
+}
+
+.square {
+    width: 75px;
+    height: 75px;
+    background-color: black;
+    position: absolute;
+}
+
+.square.no-click {
+    pointer-events: none; /* Quadrados não clicáveis */
+}
+
+.container {
+    position: fixed;
+    width: 100%; /* Ajuste conforme necessário */
+    height: 300px; /* Ajuste conforme necessário */
+    pointer-events: none; /* Evitar que a área de imagem seja clicável */
+    padding-top: 400px;
+}
+
+.container img {
+    position: absolute;
+    bottom: 0;
+    width: 300px; /* Ajuste conforme necessário */
+    height: 300px; /* Ajuste conforme necessário */
+    padding-top: 500px;
+    object-fit: fill;
+    pointer-events: auto; /* Permitir interação nas imagens específicas */
+}
+
+.container img:nth-child(1) {
+    right: 730px;
+}
+
+.container img:nth-child(2) {
+    right: 405px; /* Espaçamento entre as imagens */
+}
+
+.container img:nth-child(3) {
+    right: 80px; /* Espaçamento entre as imagens */
+}
+
+#seta {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+#sinal {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px; /* Largura fixa da imagem extra */
+    height: 40px; /* Altura fixa da imagem extra */
+    object-fit: fill; /* Mantém a proporção da imagem e preenche a área */
+    padding-bottom: 165px;
+    padding-right: 500px;
+}
+
+#casa {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 825px; /* Largura fixa da imagem extra */
+    height: 525px; /* Altura fixa da imagem extra */
+    padding-bottom: 100px;
+    padding-right: 360px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 200px;
+}
+
+.seta-link {
+    position: absolute;
+    width: 40px; /* Ajuste conforme necessário */
+    height: 35px; /* Ajuste conforme necessário */
+    top: -157px; /* Distância do topo da página */
+    left: 40px; /* Distância da esquerda da página */
+    z-index: 10; /* Garantir que o link esteja em uma camada superior */
+}
+
+.seta-image {
+    width: 35px; /* Ajustar o tamanho da imagem conforme necessário */
+    height: auto;
+}
+

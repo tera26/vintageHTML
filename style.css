@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.caixa {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.primeiralinha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    padding-bottom: 50px;
+    padding-top: 110px;
+    padding-left: 380px;
+    padding-right: 250px;
+}
+
+.primeiralinha img {
+    width: 75px; 
+    height: 75px; 
+    object-fit: fill; 
+    cursor: pointer;
+}
+
+#extraImage {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 75px; /* Largura fixa da imagem extra */
+    height: 75px; /* Altura fixa da imagem extra */
+    object-fit: cover; /* Mantém a proporção da imagem e preenche a área */
+    padding-bottom: 111px;
+    padding-right: 438px;
+}
+
+.description {
+    position: absolute;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+    display: none; /* Inicialmente escondido */
+}
+
+
+.action-history {
+    padding: 20px; /* Aumenta o espaço interno */
+    margin: 20px auto; /* Margens automáticas no topo e na base, e margens automáticas nos lados */
+    position: relative; /* Habilita o posicionamento relativo */
+    left: 3%; /* Move o elemento para a direita em relação ao seu contêiner em 50% da largura */
+    transform: translateX(-50%); /* Reposiciona o elemento para a esquerda em 50% da sua própria largura */
+}
+
+.action-history h2 {
+    margin-right: 20px;
+}
+
+
+#actions-list {
+    list-style-type: none; /* Remove os marcadores padrão da lista */
+    padding: 0;
+    margin: 0; /* Remove o espaçamento padrão da lista */
+}
+
+#actions-list li {
+    margin-bottom: 5px; /* Espaçamento entre os itens da lista */
+}
+
+.action-history h2 {
+    display: inline; /* Define o título e o botão como elementos em linha */
+    margin-right: 20px; /* Adiciona espaçamento entre o título e o botão */
+}
+
+#clear-button {
+
+    border: none; /* Remove a borda */
+    background: none; /* Remove o fundo */
+    padding: 0; /* Remove o preenchimento */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+    outline: none; /* Remove o contorno quando o botão está focado */
+   
+}
