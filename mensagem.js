@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Adicione mais mensagens conforme necessário
     };
 
-    // Adiciona um ouvinte de evento de clique a cada imagem
+   // Adiciona um ouvinte de evento de clique a cada imagem
     images.forEach(function (image) {
         image.addEventListener('click', function () {
             // Obtém o ID da imagem clicada
