@@ -55,6 +55,9 @@ body {
     position: relative; /* Habilita o posicionamento relativo */
     left: 3%; /* Move o elemento para a direita em relação ao seu contêiner em 50% da largura */
     transform: translateX(-50%); /* Reposiciona o elemento para a esquerda em 50% da sua própria largura */
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
 }
 
 .action-history h2 {
