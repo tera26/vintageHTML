@@ -16,6 +16,9 @@ body {
     padding-top: 110px;
     padding-left: 380px;
     padding-right: 250px;
+    width: 800px; ;
+    min-width: 800px;
+    max-width: 800px;
 }
 
 .primeiralinha img {
