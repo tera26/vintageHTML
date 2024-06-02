@@ -94,25 +94,32 @@ document.addEventListener('DOMContentLoaded', function () {
         // Adicione mais mensagens conforme necessário
     };
 
-    // Adiciona um ouvinte de evento de clique a cada imagem
-    images.forEach(function (image) {
-        image.addEventListener('click', function () {
-            // Obtém o ID da imagem clicada
+   // Adiciona um ouvinte de evento de clique a cada imagem
+   images.forEach(function (image) {
+    image.addEventListener('click', function () {
+        // Obtém o ID da imagem clicada
         const imageId = this.getAttribute('id');
-        // Obtém a mensagem associada ao ID da imagem
-        const message = messages[imageId];
 
-        // Cria um novo item de lista
-        const listItem = document.createElement('li');
-        // Define o texto do item de lista como a mensagem associada à imagem clicada
-        listItem.textContent = message;
-        // Adiciona o item de lista ao início da lista de ações
-        actionsList.prepend(listItem);
+        // Se a imagem clicada não for a img33, executa as ações
+        if (imageId !== 'img33') {
+            // Obtém a mensagem associada ao ID da imagem
+            const message = messages[imageId];
 
-        // Verifica se o número de itens no histórico é maior que 10
-        if (actionsList.children.length > 10) {
-            // Se for, remove o último item (o mais antigo)
-            actionsList.removeChild(actionsList.lastChild);
+            // Cria um novo item de lista
+            const listItem = document.createElement('li');
+            // Define o texto do item de lista como a mensagem associada à imagem clicada
+            listItem.textContent = message;
+            // Adiciona o item de lista ao início da lista de ações
+            actionsList.prepend(listItem);
+
+            // Verifica se o número de itens no histórico é maior que 10
+            if (actionsList.children.length > 10) {
+                // Se for, remove o último item (o mais antigo)
+                actionsList.removeChild(actionsList.lastChild);
+            }
+
+            // Reproduz o som
+            audio.play();
         }
     });
 });
