@@ -93,15 +93,17 @@ document.addEventListener('DOMContentLoaded', function () {
         
         // Adicione mais mensagens conforme necessário
     };
-
-   // Adiciona um ouvinte de evento de clique a cada imagem
-   images.forEach(function (image) {
+// Adiciona um ouvinte de evento de clique a cada imagem
+images.forEach(function (image) {
     image.addEventListener('click', function () {
         // Obtém o ID da imagem clicada
         const imageId = this.getAttribute('id');
 
-        // Se a imagem clicada não for a img33, executa as ações
+        // Verifica se a imagem clicada não é a img33
         if (imageId !== 'img33') {
+            // Reproduz o som
+            audio.play();
+
             // Obtém a mensagem associada ao ID da imagem
             const message = messages[imageId];
 
@@ -117,9 +119,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Se for, remove o último item (o mais antigo)
                 actionsList.removeChild(actionsList.lastChild);
             }
-
-            // Reproduz o som
-            audio.play();
         }
     });
 });
