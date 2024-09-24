@@ -40,56 +40,56 @@ document.addEventListener('DOMContentLoaded', function () {
         img2: '26',
         img3: '100',
         img4: '2',
-        img5:'19',
+        img5: '19',
         img6: '33',
         img7: '21',
-        img8:'18',
-        img9:'91',
-        img10:'84',
-        img11:'53',
-        img12:'66',
-        img13:'13',
-        img14:'42',
-        img15:'70',
-        img16:'8',
-        img17:'67',
-        img18:'82',
-        img19:'24',
-        img20:'3',
-        img21:'49',
-        img22:'28',
-        img23:'30',
-        img24:'22',
-        img25:'10',
-        img26:'51',
-        img27:'34',
-        img28:'56',
-        img29:'6',
-        img30:'0',
-        img31:'20',
-        img32:'101',
-        img33:'38',
-        img34:'23',
-        img35:'87',
-        img36:'80',
-        img37:'45',
-        img38:'102',
-        img39:'55',
-        img40:'32',
-        img41:'88',
-        img42:'93',
-        img43:'46',
-        img44:'3',
-        img45:'59',
-        img46:'71',
-        img47:'73',
-        img48:'85',
-        img49:'25',
-        img50:'39',
-        img51:'57',
-        img52:'5',
-        img53:'89',
-        img54:'12',
+        img8: '18',
+        img9: '91',
+        img10: '84',
+        img11: '53',
+        img12: '66',
+        img13: '13',
+        img14: '42',
+        img15: '70',
+        img16: '8',
+        img17: '67',
+        img18: '82',
+        img19: '24',
+        img20: '3',
+        img21: '49',
+        img22: '28',
+        img23: '30',
+        img24: '22',
+        img25: '10',
+        img26: '51',
+        img27: '34',
+        img28: '56',
+        img29: '6',
+        img30: '0',
+        img31: '20',
+        img32: '101',
+        img33: '38', // Mensagem para img33
+        img34: '23',
+        img35: '87',
+        img36: '80',
+        img37: '45',
+        img38: '102',
+        img39: '55',
+        img40: '32',
+        img41: '88',
+        img42: '93',
+        img43: '46',
+        img44: '3',
+        img45: '59',
+        img46: '71',
+        img47: '73',
+        img48: '85',
+        img49: '25',
+        img50: '39',
+        img51: '57',
+        img52: '5',
+        img53: '89',
+        img54: '12',
         
         // Adicione mais mensagens conforme necessário
     };
@@ -98,24 +98,27 @@ document.addEventListener('DOMContentLoaded', function () {
     images.forEach(function (image) {
         image.addEventListener('click', function () {
             // Obtém o ID da imagem clicada
-        const imageId = this.getAttribute('id');
-        // Obtém a mensagem associada ao ID da imagem
-        const message = messages[imageId];
+            const imageId = this.getAttribute('id');
+            // Obtém a mensagem associada ao ID da imagem
+            const message = messages[imageId];
 
-        // Cria um novo item de lista
-        const listItem = document.createElement('li');
-        // Define o texto do item de lista como a mensagem associada à imagem clicada
-        listItem.textContent = message;
-        // Adiciona o item de lista ao início da lista de ações
-        actionsList.prepend(listItem);
+            // Cria um novo item de lista
+            const listItem = document.createElement('li');
+            // Define o texto do item de lista como a mensagem associada à imagem clicada
+            listItem.textContent = message;
+            // Adiciona o item de lista ao início da lista de ações
+            actionsList.prepend(listItem);
 
-        // Verifica se o número de itens no histórico é maior que 10
-        if (actionsList.children.length > 10) {
-            // Se for, remove o último item (o mais antigo)
-            actionsList.removeChild(actionsList.lastChild);
-        }
+            // Verifica se o número de itens no histórico é maior que 10
+            if (actionsList.children.length > 10) {
+                // Se for, remove o último item (o mais antigo)
+                actionsList.removeChild(actionsList.lastChild);
+            }
+
+            // Mostra a descrição ao clicar na imagem
+            showDescription(message);
+        });
     });
-});
 
     // Adiciona um ouvinte de evento de clique ao botão de limpar histórico
     clearButton.addEventListener('click', function () {
@@ -124,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Adiciona a lógica de reprodução de áudio
 document.addEventListener('DOMContentLoaded', function () {
     // Seleciona todas as imagens
     const images = document.querySelectorAll('.primeiralinha img');
@@ -142,4 +146,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
