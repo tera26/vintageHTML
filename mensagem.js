@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         img30:'38',
         img31:'20',
         img32:'101',
-        img33:'38',
+        img33:'1', // Mensagem para img33
         img34:'23',
         img35:'87',
         img36:'80',
@@ -94,32 +94,33 @@ document.addEventListener('DOMContentLoaded', function () {
         // Adicione mais mensagens conforme necessário
     };
 
-   // Adiciona um ouvinte de evento de clique a cada imagem
+    // Adiciona um ouvinte de evento de clique a cada imagem
     images.forEach(function (image) {
         image.addEventListener('click', function () {
             // Obtém o ID da imagem clicada
             const imageId = this.getAttribute('id');
 
-        
-                // Obtém a mensagem associada ao ID da imagem
-                const message = messages[imageId];
+            // Obtém a mensagem associada ao ID da imagem
+            const message = messages[imageId];
 
-                // Cria um novo item de lista
-                const listItem = document.createElement('li');
-                // Define o texto do item de lista como a mensagem associada à imagem clicada
-                listItem.textContent = message;
-                // Adiciona o item de lista ao início da lista de ações
-                actionsList.prepend(listItem);
+            // Cria um novo item de lista
+            const listItem = document.createElement('li');
+            // Define o texto do item de lista como a mensagem associada à imagem clicada
+            listItem.textContent = message;
+            // Adiciona o item de lista ao início da lista de ações
+            actionsList.prepend(listItem);
 
-                // Verifica se o número de itens no histórico é maior que 10
-                if (actionsList.children.length > 10) {
-                    // Se for, remove o último item (o mais antigo)
-                    actionsList.removeChild(actionsList.lastChild);
-                }
+            // Verifica se o número de itens no histórico é maior que 10
+            if (actionsList.children.length > 10) {
+                // Se for, remove o último item (o mais antigo)
+                actionsList.removeChild(actionsList.lastChild);
+            }
 
-                // Reproduz o som
-                audio.play();
-            })
+            // Mostra a descrição ao clicar na imagem
+            showDescription(message);
+
+            // Reproduz o som
+            audio.play();
         });
     });
 
@@ -128,8 +129,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Remove todos os itens da lista de histórico de ações
         actionsList.innerHTML = '';
     });
+});
 
-
+// Adiciona a lógica de reprodução de áudio
 document.addEventListener('DOMContentLoaded', function () {
     // Seleciona todas as imagens
     const images = document.querySelectorAll('.primeiralinha img');
@@ -148,4 +150,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
