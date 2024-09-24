@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         img30:'38',
         img31:'20',
         img32:'101',
-        img33:'1',
+        img33:'38',
         img34:'23',
         img35:'87',
         img36:'80',
@@ -100,8 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Obtém o ID da imagem clicada
             const imageId = this.getAttribute('id');
 
-            // Se a imagem clicada não for a img33, executa as ações
-            if (imageId !== 'img33') {
+        
                 // Obtém a mensagem associada ao ID da imagem
                 const message = messages[imageId];
 
@@ -120,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Reproduz o som
                 audio.play();
-            }
+            })
         });
     });
 
@@ -129,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Remove todos os itens da lista de histórico de ações
         actionsList.innerHTML = '';
     });
-});
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // Seleciona todas as imagens
