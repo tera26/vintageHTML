@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
         img27:'34',
         img28:'56',
         img29:'6',
-        img30:'0',
+        img30:'38',
         img31:'20',
         img32:'101',
         img33:'1',
