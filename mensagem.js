@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         img30:'38',
         img31:'20',
         img32:'101',
-        img33:'1', // Mensagem para img33
+        img33:'38', // Mensagem para img33
         img34:'23',
         img35:'87',
         img36:'80',
